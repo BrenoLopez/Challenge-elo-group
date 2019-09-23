@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="ie=edge" http-equiv="X-UA-Compatible">
+        <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/src/assets/css/styleForm.css" rel="stylesheet">
+        <script src="/src/assets/jquery/jquery.min.js"></script>
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <title>Challenge elogroup</title>
+    </head>
+
+    <body>
+
+        <div class="container-class">
+            <div class="">
+                <img src="/src/assets/images/logo-elogroup.png" alt="logo-elogroup">
+                <h1 class="text-center">Formulário</h1>
+                <form action="" class="form-outline">
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label" for="nome">Nome:</label>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <input class="form-control" name="nome" placeholder="Digite seu nome" required type="text"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label" for="telefone">Telefone:</label>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10"><input class="form-control" name="telefone" placeholder="Digite seu telefone" type="text"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label" for="como_nos_conheceu">Como nos conheceu:
+                            </label>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <select class="form-control" id="" name="como_nos_conheceu">
+                                    <option value="">Selecione...</option>
+                                    <option value="tv">TV</option>
+                                    <option value="internet">Internet</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="form-group row">
+                            <label for="possui_rede_social">Possui rede social:
+                            </label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input class="custom-control-input" id="customRadio1" name="confirmacao_rede_social" type="radio" value="1">
+                            <label class="custom-control-label" for="customRadio1">Sim</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input class="custom-control-input" id="customRadio2" name="confirmacao_rede_social" type="radio" value="0">
+                            <label class="custom-control-label" for="customRadio2">Não</label>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                    <div class="form-group row">
+                        <label for="">Quais:
+                        </label>
+                    </div>
+                    <div class="form-group row">
+                    <div class="custom-control custom-checkbox">
+                        <input name="rede_social" type="checkbox" value="facebook" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label button-checkbox" for="customCheck1" >Facebook</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input name="rede_social" type="checkbox" value="linkedIn" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label button-checkbox" for="customCheck2">LinkedIn</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input name="rede_social" type="checkbox" value="instagram" class="custom-control-input" id="customCheck3">
+                        <label class="custom-control-label button-checkbox" for="customCheck3">Instagram</label>
+                    </div>
+                </div>
+            </div>
+                <button class="btn btn-primary" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</div>
+<script src="./js/main.js"/>
+</html>

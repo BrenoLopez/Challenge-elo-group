@@ -1,0 +1,23 @@
+html,body,div.container-class{
+    height: 100%;
+}
+
+.container-class {   
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border: 1px solid;
+}
+
+label,.checkbox-group{
+    padding-left: 15px;
+}
+
+.button-checkbox{
+    padding-right: 15px;    
+}
+input,label,h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
