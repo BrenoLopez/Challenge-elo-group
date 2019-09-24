@@ -1,8 +1,12 @@
 body{
     background-color: whitesmoke;
 }
-html,body,div.container-class{
-    height: 100%;
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+    padding: 0;
+    padding-top: 10px;
 }
 
 .container-class {   
@@ -37,7 +41,7 @@ form{
 
 .form-container{
     width: 35%;
-    height: 97%;
+    height: 750px;
     border-radius: 20px;
     box-shadow:  0 0 0.5em black;
 }

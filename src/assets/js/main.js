@@ -12,7 +12,7 @@ $(document).ready(function(){
                     <label class="custom-control-label button-checkbox" for="customCheck1" >Facebook</label>
                 </div>
                 <div class="custom-control custom-checkbox">
-                <input name="rede_social" type="checkbox" value="linkedIn" class="custom-control-input" id="customCheck2">
+                <input name="rede_social" type="checkbox" value="linkedin" class="custom-control-input" id="customCheck2">
                 <label class="custom-control-label button-checkbox" for="customCheck2">LinkedIn</label>
             </div>
             <div class="custom-control custom-checkbox">
@@ -24,47 +24,38 @@ $(document).ready(function(){
     $("#customRadio2").click(function(){
         $("#redes_sociais").html("<div></div>");
     });
-
-    const array = new Array();
-    const dados = ({
-        nome: "",
-        telefone:"", 
-        cono_nos_conheceu: "",
-        confirmacao_rede_social: 0,
-        rede_social: []
-    });
-
-    $("#form").change(function(e){
-        if(e.target.name === "rede_social"){
-            const {id} = e.target;
-           
-            if(e.target.checked){                
-                array.push(e.target.value);              
-            }
-            else{
-            let indice;
-            if(id === "customCheck1"){
-                indice = 0;
-                    }
-            else if(id === "customCheck2"){
-                indice = 1;
-                    }
-            else{
-                indice = 2;
+    
+        const array = new Array();
+        const dados = {
+            nome: "",
+            telefone:"", 
+            como_nos_conheceu: "",
+            confirmacao_rede_social: 0,
+            rede_social: []
+        };
+    
+        $("#form").change(function(e){
+            if(e.target.name === "rede_social"){           
+                if(e.target.checked){                
+                    array.push(e.target.value);              
                 }
-            console.log(indice);
-            array.splice(indice);
-            } 
+                else{
+                const rede_social = e.target.value;
+                const indice = array.indexOf(rede_social.toLowerCase());
+                array.splice(indice);
+                }   
                 
-            console.log(array);           
-        }   
-        dados[e.target.name] = e.target.value; 
-          
-        console.log(dados);
-    });
+            }   
+            dados.rede_social = array;
+            console.log(dados.rede_social);
+            dados[e.target.name] = e.target.value;           
+        });
+       
+        
+    
     $("#form").submit(function(e){
         e.preventDefault();    
-      
+      axios.post('http://localhost:8080',dados);
 
     });
    
