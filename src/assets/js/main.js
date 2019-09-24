@@ -42,9 +42,8 @@ $(document).ready(function(){
                 else{
                 const rede_social = e.target.value;
                 const indice = array.indexOf(rede_social.toLowerCase());
-                array.splice(indice);
-                }   
-                
+                array.splice(indice,1);
+                }              
             }   
             dados.rede_social = array;
             console.log(dados.rede_social);
