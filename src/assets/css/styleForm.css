@@ -1,3 +1,6 @@
+body{
+    background-color: whitesmoke;
+}
 html,body,div.container-class{
     height: 100%;
 }
@@ -6,7 +9,6 @@ html,body,div.container-class{
     display: flex;
     justify-content: center; 
     align-items: center;
-    border: 1px solid;
 }
 
 label,.checkbox-group{
@@ -20,4 +22,27 @@ input,label,h1{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.btn-default{
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    background:  rgb(243,187,43);  
+    width: 100px;
+   
+  
+}
+form{
+    padding-left: 35px;
+}
 
+.form-container{
+    width: 35%;
+    height: 97%;
+    border-radius: 20px;
+    box-shadow:  0 0 0.5em black;
+}
+
+#logo-style{
+    padding-top: 20px;
+    padding-left: 20px;
+}
