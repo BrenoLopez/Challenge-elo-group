@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="ie=edge" http-equiv="X-UA-Compatible">
-        <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/src/assets/css/styleForm.css" rel="stylesheet">
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/styleForm.css" rel="stylesheet">
         <title>Challenge elogroup</title>
     </head>
 
@@ -15,12 +15,12 @@
         <div class="container-class">
             <div class="form-container">
 
-                <img src="/src/assets/images/logo-elogroup.png" alt="logo-elogroup" id="logo-style">
+                <img src="assets/images/logo-elogroup.png" alt="logo-elogroup" id="logo-style">
                 <h1 class="text-center">Formulário</h1>
                     <div id="alert"></div>
               
 
-                <form onsubmit="enviaForm(event);" method="POST">
+                <form  id="form" method="POST">
 
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label" for="nome">Nome:</label>
@@ -80,7 +80,7 @@
         </div>
     </body>
 </div>
-<script src="./assets//axios/axios.min.js"></script>
+<script src="./assets/axios/axios.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="./assets/jquery/jquery.min.js"></script>
 <script src="./assets/jquery/jquery.mask.js"></script>
