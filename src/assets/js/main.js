@@ -62,8 +62,7 @@ $(document).ready(function(){
             <div class="alert alert-success container text-center" role="alert">
             Formulário enviado com sucesso!
     </div>`);
-        
-     
+        $("#enviar").prop('disabled',true);
     });
    
 });
