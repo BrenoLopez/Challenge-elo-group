@@ -3,7 +3,11 @@ Repositorio para compartilhar o desafio para processo seletivo da Elo Group. Tra
 
 Estrutura de pastas: 
 - src: contém todos os arquivos de codigo do projeto;
-    * assets: pasta que contém css, js e jquery do projeto;
+    * assets: pasta que contém css, js, axios e jquery do projeto;
+        - css: contém arquivo de estilização;
+        - js:  contém códigos javascript;
+        - axios: contém códigos da lib axios, responsável pelo envio do formulário via post;
+        - jquery: contém códigos da lib jquery, responsável pela manipulção do html e DOM  do projeto; 
 - serverTest: contém servidor criado com a framework express para testar o envio do formulário;
 - bootstrap: contém arquivos de css e js para funcionamento do bootstrap.
 
