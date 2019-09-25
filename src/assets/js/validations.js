@@ -5,7 +5,7 @@ $(document).ready(function(){
         const nomeSeparado = nome.split(' ');
         if(nomeSeparado.length < 2 ){
             $("#alert").html(` 
-             <div class="alert alert-danger container" role="alert">
+             <div class="alert alert-danger container text-center" role="alert">
                     Insira também seu sobrenome!
           </div>`
           );

@@ -34,8 +34,9 @@ $(document).ready(function(){
             rede_social: []
         };
     
-        $("#form").change(function(e){
-            if(e.target.name === "rede_social"){           
+     $("#form").change(function(e){
+            dados[e.target.name] = e.target.value; 
+           if(e.target.name === "rede_social"){           
                 if(e.target.checked){                
                     array.push(e.target.value);              
                 }
@@ -46,26 +47,26 @@ $(document).ready(function(){
                 }              
             }   
             dados.rede_social = array;
-            console.log(dados.rede_social);
-            dados[e.target.name] = e.target.value;           
+            return dados;
         });
-       
         
-    
+    async function enviaForm (){
+            const response = await axios.post('http://localhost:8080',dados);
+            console.log(response);
+            return response;
+        }
     $("#form").submit(function(e){
-        e.preventDefault();    
-      axios.post('http://localhost:8080',dados);
-
+        e.preventDefault();     
+        enviaForm();
+        $('#alert').html(`
+            <div class="alert alert-success container text-center" role="alert">
+            Formulário enviado com sucesso!
+    </div>`);
+        
+     
     });
    
 });
-// formato a ser enviado
-// {
-//     nome: "oasdfoija",
-//     telefone: "ciaushdfuia",
-//     como_nos_conheceu: "TV".,
-//     confirmacao_rede_social: 0,
-//     rede_social: ["facebook", "linkedin","instagram"]
-// }
+
 
            
